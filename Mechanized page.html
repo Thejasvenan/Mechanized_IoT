@@ -17,7 +17,7 @@
             margin-bottom: 20px;
         }
 
-        /* ✅ Changed: Grid layout that adapts to all screen sizes */
+        /* Grid layout that adapts to all screen sizes */
         .button-container {
             display: grid;
             grid-template-columns: repeat(5, minmax(80px, 1fr)); /* Always 5 columns */
@@ -42,7 +42,7 @@
             height: auto;
         }
 
-        /* ✅ Changed: Ensure 5 buttons in one row for all devices */
+        /* Ensure 5 buttons in one row for all devices */
         @media (max-width: 600px) {  /* For smaller devices */
             .button-container {
                 grid-template-columns: repeat(5, 1fr);
@@ -68,7 +68,7 @@
     <img id="logo" src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/Mechanized.png" alt="Mechanized Logo">
 
     <div class="button-container">
-        <!-- ✅ Changed: Updated all image paths to use GitHub -->
+        <!-- Updated all image paths to use GitHub -->
         <button class="letter-btn" id="M" onclick="toggle('M')">
             <img src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/M_off.png" id="M_img">
         </button>
