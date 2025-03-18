@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mechanized</title>
+    <style>
+        body {
+            background-image: url('https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/Bg.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #logo {
+            width: 400px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Grid layout that adapts to all screen sizes */
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(80px, 1fr)); /* Always 5 columns */
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: auto;
+        }
+
+        .letter-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+        }
+
+        .letter-btn img {
+            width: 100%; /* Adjust image size automatically */
+            max-width: 100px;
+            height: auto;
+        }
+
+        /* Ensure 5 buttons in one row for all devices */
+        @media (max-width: 600px) {  /* For smaller devices */
+            .button-container {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            .letter-btn {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 400px) {  /* For very small screens */
+            .button-container {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            .letter-btn {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/Mechanized.png" alt="Mechanized Logo">
+
+    <div class="button-container">
+        <!-- Updated all image paths to use GitHub -->
+        <button class="letter-btn" id="M" onclick="toggle('M')">
+            <img src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/M_off.png" id="M_img">
+        </button>
+        <button class="letter-btn" id="E" onclick="toggle('E')">
+            <img src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/E_off.png" id="E_img">
+        </button>
+        <button class="letter-btn" id="C" onclick="toggle('C')">
+            <img src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/C_off.png" id="C_img">
+        </button>
+        <button class="letter-btn" id="H" onclick="toggle('H')">
+            <img src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/H_off.png" id="H_img">
+        </button>
+        <button class="letter-btn" id="A" onclick="toggle('A')">
+            <img src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/A_off.png" id="A_img">
+        </button>
+        <button class="letter-btn" id="N" onclick="toggle('N')">
+            <img src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/N_off.png" id="N_img">
+        </button>
+        <button class="letter-btn" id="I" onclick="toggle('I')">
+            <img src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/I_off.png" id="I_img">
+        </button>
+        <button class="letter-btn" id="Z" onclick="toggle('Z')">
+            <img src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/Z_off.png" id="Z_img">
+        </button>
+        <button class="letter-btn" id="E2" onclick="toggle('E2')">
+            <img src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/E2_off.png" id="E2_img">
+        </button>
+        <button class="letter-btn" id="D" onclick="toggle('D')">
+            <img src="https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/D_off.png" id="D_img">
+        </button>
+    </div>
+
+    <script>
+        function toggle(letter) {
+            let img = document.getElementById(letter + "_img");
+            if (img.src.includes("_off")) {
+                img.src = `https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/${letter}_on.png`;
+            } else {
+                img.src = `https://raw.githubusercontent.com/Thejasvenan/Mechanized_IoT/main/${letter}_off.png`;
+            }
+        }
+    </script>
+</body>
+</html>
