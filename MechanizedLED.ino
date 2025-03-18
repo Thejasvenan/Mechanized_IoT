@@ -1,8 +1,8 @@
 #include <WiFi.h>
 #include <WebServer.h>
 
-const char* ssid = "Thejas A12"; // CHANGE IT
-const char* password = "Abcd@1234"; // CHANGE IT 
+const char* ssid = "Your SSID"; // CHANGE IT
+const char* password = "Your Password"; // CHANGE IT 
 
 WebServer server(80);
 
